@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+     	<title>Thermostat</title>
+		<style>
+		body {background-color: #D0D0D0;}
+		t {
+			color: white;
+			font-family: verdana;
+			font-size: 100%;
+			left-padding: 30px;
+		  }
+
+		r {
+			color: white;
+			font-family: verdana;
+			font-size: 100%;
+			padding: 50px;
+		  }
+
+		w {
+			color: white;
+			font-family: verdana;
+			font-size: 100%;
+			right-padding: 30px;
+		  }
+		tinput {
+			     color: black;
+			     font-family: verdana;
+			     font-size: 300%;
+			     left-padding: 50px;
+			   }
+		rinput {
+			     color: black;
+			     font-family: verdana;
+			     font-size: 300%;
+			     padding: 70px;
+		       }
+		winputD {
+			     color: black;
+			     font-family: verdana;
+			     font-size: 175%;
+			     right-padding: 50px;
+		       }
+
+		winputT {
+			     color: black;
+			     font-family: verdana;
+			     font-size: 175%;
+			     right-padding: 50px;
+		       }
+
+		td {
+			text-align: center;
+		   }
+		table {
+		       border: 1px solid white;
+		       margin: 0 auto;
+		      }
+
+		#refresh {
+		           color: white;
+		           background: transparent;
+		           border: none;
+		           font-size: 18px;
+		           font-weight: 500;
+		           font-family: verdana;
+		           margin: 0 auto;
+		           display: block;
+		         }
+        #input
+        {
+        	margin: 0 auto;
+        }
+		</style>
+	</head>
+
+	<body>
+		<table style "width:200%">
+		<tr>
+			<td><t>| Thermostat |</t></td>
+			<td><r>| Room Tempurature |</r></td>
+			<td><w>| Weather |</w></td>
+		</tr>
+		<tr>
+			<td><tinput id="desired"> 0 </tinput></td>
+			<td><rinput id="current"> 0 </rinput></td>
+			<td><winputD id="weatherD"> Cloudy </winputD></td>
+		</tr>
+		<tr>
+			<td><button type="button" id="up" onClick="handleUp()">/\</button>
+				<button type="button" id="down" onClick="handleDown()">\/</button>
+			</td>
+			<td></td>
+			<td><winputT id="weatherT"> 60* <winputT></td>
+		</tr>
+		</table>
+		<!--
+		<input type="text" id="input" placeholder="Enter a temperature"/>
+		<input type="button" value="Submit Request" onClick="handleSubmitButton()">
+		-->
+		<!-- <button type="button", id="refresh">R e f r e s h</button> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	    <script src='client.js'></script>
+	</body>
+</html>
